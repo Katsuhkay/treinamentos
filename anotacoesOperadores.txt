@@ -1,0 +1,252 @@
+Irei dividir em capitulos, cada um com 50 exercicios, desde mais básicos até mais avançados.
+
+TUDO PRECISA SER DIGITADO PALAVRA POR PALAVRA PARA MAIOR FIXAÇÃO DO ESTUDO, NÃO FAZER ctl+c E ctl+v
+
+Aqui anotarei algumas coisas que acho importante também, para consulta caso necessário
+
+A base da programação possui 5 pilares. É extremamente importante saber eles na ponta da língua.
+
+Eles são:
+-- Operadores
+-- Funções
+-- Tipos de dados
+-- Estrutura de dados
+-- Funções
+
+
+
+Explicação de cada um:
+
+-- Operadores são símbolos usados para realizar operações em variáveis e valores. Eles podem ser categorizados em vários tipos. Aqui está uma explicação de cada tipo de operador
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Operadores aritméticos.
+Esses operadores são usados para realizar operações matemáticas entre dois valores.
+
++ (Adição): Soma dois valores.
+    Exemplo: 3 + 5 retorna 8
+
+- (Subtração): Subtrai um valor de outro.
+    Exemplo: 10 - 2 retorna 8
+
+* (Multiplicação): Multiplica dois valores.
+    Exemplo: 4 * 5 retorna 20
+
+/ (Divisão): Divide um valor pelo outro (Retorna um número de ponto flutuante).
+    Exemplo: 10 / 2 retorna 5.0
+
+// (Divisão inteira): Divide dois valores, retornando o resultado inteiro (descarta a parte decimal).
+    Exemplo: 10//3 retorna 3.
+
+% (Módulo): Retorna o resto da divisão entre dois valores.
+    Exemplo: 10 % 3 retorna 1
+
+** (Potenciação): Eleva um valor à potência de outro.
+    Exemplo: 2 ** 3 retorna 8
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Operadores de Atribuição
+Esses operadores são usados para atribuir valores a variáveis
+
+=: Atribui o valor à direita à variável à esquerda.
+    Exemplo: x = 5 atribui 56 a x.
+
++=: Adicina e atribui o resultado.
+    Exemplo: x += 3 é quivalente à x = x + 3.
+
+-=: Subtrai e atribui o resultado.
+    Exemplo: x -= 2 é equivalente a x = x - 2
+
+*=: Multiplica e atribui o resultado.
+    Exemplo: x *= 2 é equivalente a x = x * 2
+
+/=: Divide e atribui o resultado.
+    Exemplo: x /= 2 é equivalente a x = x / 2
+
+//=: Divide por inteiro e atribui o resultado.
+    Exemplo: x //= 2 é equivalente a x = x // 2
+
+%=: Aplica o operador módulo e atribui o resultado.
+    Exemplo: x %= 2 é equivalente a x = x % 2
+
+**=: Aplica potenciação e atribui o resultado.
+    Exemplo: x **= 2 é equivalente a x ** 2
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Operadores De comparação
+Esses operadores comparam dois valores e retornam um valor booleano (True para verdadreiro ou False para falso)
+
+
+== (Igual a): Verifica se dois valores são iguais
+    Exemplo_1: 5 == 5 retorna True
+    Exemplo_2: 5 == 2 retorna False
+
+!= (Diferente de): Verifica se dois valores são diferentes
+    Exemplo_1: 5 != 5 retorna False
+    Exemplo_2: 5 != 2 retorna True
+
+> (Maior que): Veridica se o valor à esquerda é maior que o da direita.
+    Exemplo_1: 5 > 2 retorna True
+    Exemplo_2: 5 > 6 retorna False
+
+< (Menor que): Verifica se o valor à esquerda é menor que o da direita
+    Exemplo_1: 5 < 2 retorna False
+    Exemplo_2: 5 < 6 retorna True
+
+>= (Maior ou Igual): Verifica se o valor à esquerda é maior ou igual ao da direita.
+    Exemplo_1: 5 >= 2 retorna True
+    Exemplo_2: 5 >= 5 retorna True
+    Exemplo_3: 5 >= 6 retorna False
+
+<= (Menor ou Igual): Verifica se o valor à esquerda é menor ou igual ao da direita.
+    Exemplo_1: 5 <= 2 retorna False
+    Exemplo_2: 5 <= 5 retorna True
+    Exemplo_3: 5 <= 6 retorna True
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Operadores Lógicos
+Esses operadores são usados para combinar expressões condicionais
+
+******************************************************************************************************************************************************
+and (E): Retora True se ambas as expressões forem verdadeiras.
+
+x = 5
+y = 10
+
+# Ambos verdadeiros
+print(x > 0 and y > 0) # Retorna True
+
+# Um é falsos
+print(x > 0 and y < 0) # Retorna False
+
+******************************************************************************************************************************************************
+
+or (OU): Retorna True se uma das expressões for verdadeira.
+
+x = 5
+y = 10
+
+#Pelo menos uma é verdadeira
+print(x > 0 or y < 0) # Retorna True
+
+# Ambos são falsos
+print(x < 0 or y < 0) # Retorna False
+
+******************************************************************************************************************************************************
+
+not (Não): Inverte i valor booleano da expressão
+
+x = 5
+
+#Inverte valor lógico
+print(not(5 > 0)) # Retorna False
+print(not(5 < 0)) # Retorna True
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Operadores de Identidade
+
+******************************************************************************************************************************************************
+
+is: Verifica se dois objetos referenciam o mesmo local na memória.
+Ele retorna True se forem o mesmo e False se não.
+
+x = [1, 2, 3]
+y = x
+z = [1, 2, 3]
+
+#Verifica se x e y são o mesmo
+print(x is y) # Retorna True, pois y é uma referência ao mesmo objeto que x 
+
+#Verifica se x e z são o mesmo objeto 
+print(x is z) # Retorna False, pois apesar de serem iguais em conteúdo eles são objetos diferentes
+
+******************************************************************************************************************************************************
+
+is not: Verifica se dois objetos não são o mesmo, ou seja, se ocupam diferentes posições na memória.
+Ele retorna True se forem objetos diferentes.
+
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x 
+
+#Verifica se x e y não são o mesmo objeto 
+print(x is not y) #Retorna True pois x e y são objetos diferentes
+
+#Verifica se x e z naõ são o mesmo objeto 
+print(x is not z) #Retorna False pois z é uma referência ao mesmo objeto que x 
+
+******************************************************************************************************************************************************
+
+IMPORTANTE:
+
+    O operador is é usado para comparar identidade de objetos, não necessáriamente o valor.
+    Para comparar valores(conteúdo) de dois objetos, use o operadoe de comparação ==.
+
+x = [1, 2, 3]
+y = [1, 2, 3]
+
+#Compara os valores
+print(x == y) # Retorna True, pois o conteúdo das variáveis é identico
+
+# Compara a identidade (Se são o mesmo).
+print(x is y) # Retorna False, pois ocupam lugares diferentes na memória 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Operadores de Associação (Pertinência)
+Esses operadores verificam se um valor está contido em uma sequência, como uma lista ou string.
+
+in: Retorna True se um valor está presente na sequência.
+    Exemplo: 'a' in 'banana' retorna True 
+
+not in: Retorna True se um valor não está presente na sequência.
+    Exemplo: 'x' not in 'banana' retorna True
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Operadores  Bitwise
+Esses operadores trabalham com bits e realizam operações de bit a bit.
+
+& (E bit a bit): Compara cada bit de dois valores e retorna 1 se ambos os bits forem 1.
+    Exemplo: 5 & 3 (5 = 101, 3 = 011 → 001) # Retorna 1.
+
+| (Ou bit a bit): Compara cada bit de dois valores e retorna 1 se qualquer um dos dois bits for 7.
+    Exemplo: 5 | 3 (5 = 101, 3 = 011 → 111) retorna 7.
+
+^ (Ou exclusivo bit a bit): Retorna 1 quando os bits comparados são diferentes.
+    Exemplo: 5 ^ 3 (5 = 101, 3= 011 → 110) retorna 6
+
+~ (Complemento): Inverte todos os bits de um número.
+    Exemplo: ~5 retorna -6 (em binário, ~101 vira 010, mas em complemento de dois, o resultado é -6).
+
+<< (Deslocamento à esquerda): Desloca os bits para a esquerda, adicionando zeros no final.
+    Exemplo: 2 << 2 (2 = 10 → 1000) retorna 8.
+
+>> (Deslocamento à direita): Desloca os bits para a direita, descartando os bits à direita.
+    Exemplo: 8 >> 2 (8 = 1000 → 10) retorna 2.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+######################################################################################################################################################
+------------------------------------------------------------------------------------------------------------------------------------------------------
