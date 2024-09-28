@@ -584,3 +584,124 @@ print()
 
 ######################################################################################################################################################
 
+# 46. A partir de um simples dicionário composto por três itens, {'Alto Nível': 'Python', 'Médio Nível':'C', 'Baixo Nível':'Assembly'}, Verifique se 'Python' consta no dicionário em questão, utilizando de negação lógica para tal verificação.
+
+d = {'Alto Nívelo': 'Python',
+     'Médio Nível': 'C',
+     'Baixo Nível': 'Assembly'}
+
+# Usa-se o laço for para percorrer cada item de uma lista, dicionário, tupla ou qualquer coisa do tipo
+for i in d.values():
+    if not i == 'Python':
+        print(f"Python não está na lista")
+    else:
+        print(f"Python consta na lista")
+        break
+
+print("******************************************************************************************************************************************************")
+print()
+
+######################################################################################################################################################
+
+# 47. Crie um dicionário usando o construtor de dicionários do Python, alimente os valores com os dados de duas listas
+
+itens = ['Caneta', 'Lápis', 'Borrecha', 'Caderno']
+valores = ['1,99', '0,99', '0,50', '9,90']
+
+dicionario1 = dict(keys = itens, values = valores)
+
+print(dicionario1)
+print(type(dicionario1))
+
+print("******************************************************************************************************************************************************")
+print()
+
+######################################################################################################################################################
+
+# 48. Cie uma simples estrutura de dados simulando um dastro para uma loja. Nesse cadastro debe conter informações como:
+# Nome, idade, sexo, estado civil, nacionalidade, faixa de renda, etc... Exiba em tela tais dados
+
+cadastro = {'Nome': 'Alex',
+            'Sexo': 'Masculino',
+            'Idade': 26,
+            'Nascionalidade': 'Brasileiro',
+            'Estado civil': 'Solteiro',
+            'Escolaridade': 'Cursando Faculdade',
+            'Ocupação': 'Desempregado',
+            'Renda': 'Sem renda no momento'}
+
+print(cadastro)
+
+print("******************************************************************************************************************************************************")
+print()
+
+######################################################################################################################################################
+
+# 49. Cire um programa que recebe dados de um aluno como nome e suas notas em supostos 3 trimestres de aula, retornando um novo dicionário com o nome do aluno e a média de suas notas:
+
+aluno = [{'Nome': 'Francisco', 'Notas': [62, 73, 90]}]
+
+def calculo_media(aluno):
+    notas = []
+    for media in aluno:
+        if len(media['Notas']) > 0:
+            temp = round(sum(media['Notas']) / len(media['Notas']))
+        else:
+            temp = 0
+        notas.append({'Nome': media['Nome'], 'Média das notas':temp})
+    print(notas)
+
+media_estudante = calculo_media(aluno)
+
+print("******************************************************************************************************************************************************")
+print()
+
+######################################################################################################################################################
+
+# 50. Crie um sistema de perguntas e respostas com o usuário, pedindo que o mesmo insira um resposta. Caso a primeira questão esteja correta, exiba em tela uma mensagem de acerto e parta para a próxima pergunta, caso incorreta, exiba uma mensagem de erro e pule para a próxima pergunta:
+
+base = {
+    'Pergunta 01': {
+        'pergunta': 'Quanto é 4 x 4?',
+        'Alternativas': {
+            'a': '12',
+            'b': '24',
+            'c': '16',
+            'd': '20'
+        },
+        'Resposta certa': 'c'
+    },
+    'Pergunta 02': {
+        'pergunta': 'Quanto é 6/3?',
+        'Alternativas': {
+            'a': '2',
+            'b': '1',
+            'c': '3',
+            'd': '4'
+        },
+        'Resposta certa': 'a'
+    }
+}
+
+respostas_certas = 0
+
+for pkeys, pvalues in base.items():
+    print(f"{pkeys}: {pvalues['pergunta']}")
+
+    for rkeys, rvalues in pvalues['Alternativas'].items():
+        print(f"[{rkeys}]: {rvalues}")
+
+    resposta = input('Escolha uma das alternativas: [a], [b], [c] ou [d]: ')
+
+    if resposta == pvalues['Resposta certa']:
+        print("Resposta correta!")
+        respostas_certas += 1
+    else:
+        print("Resposta incorreta!")
+
+if respostas_certas == 0:
+    print("Você não acertou nenhuma questão.")
+elif respostas_certas == 1:
+    print("Você acertou uma de duas questões.")
+else:
+    print('Você acertou todas as duas questões.')
